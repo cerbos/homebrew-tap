@@ -7,7 +7,6 @@ class Cerbos < Formula
   homepage "https://cerbos.dev"
   version "0.9.1"
   license "Apache-2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
