@@ -5,13 +5,13 @@
 class Cerbos < Formula
   desc "Cerbos is the open core, language-agnostic, scalable authorization solution that makes user permissions and authorization simple to implement and manage by writing context-aware access control policies for your application resources."
   homepage "https://cerbos.dev"
-  version "0.42.0"
+  version "0.43.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cerbos/cerbos/releases/download/v0.42.0/cerbos_0.42.0_Darwin_x86_64.tar.gz"
-      sha256 "00f6ed12a7e76f06bd56af7056382d6cd241f2dc17854e61cae3f48f8fca4e3f"
+      url "https://github.com/cerbos/cerbos/releases/download/v0.43.0/cerbos_0.43.0_Darwin_x86_64.tar.gz"
+      sha256 "d6ac1db5ce6d6372b277bbe18da299a625c5e859dbba4c7b4db1df85a3591ccf"
 
       def install
         bin.install "cerbos"
@@ -19,8 +19,8 @@ class Cerbos < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cerbos/cerbos/releases/download/v0.42.0/cerbos_0.42.0_Darwin_arm64.tar.gz"
-      sha256 "fa348a78f1a220352b85cecc71289ef269f1bdad748369939b69bc02dd961c86"
+      url "https://github.com/cerbos/cerbos/releases/download/v0.43.0/cerbos_0.43.0_Darwin_arm64.tar.gz"
+      sha256 "8b94c40702a237fa54e691ed94c1b1ac5445758ddc03dcc86a54001b8ed04ea7"
 
       def install
         bin.install "cerbos"
@@ -32,8 +32,8 @@ class Cerbos < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cerbos/cerbos/releases/download/v0.42.0/cerbos_0.42.0_Linux_x86_64.tar.gz"
-        sha256 "49c45e54cbbe32b190cbf48a5d86b518caba686634a6d92ddebce40f84905f99"
+        url "https://github.com/cerbos/cerbos/releases/download/v0.43.0/cerbos_0.43.0_Linux_x86_64.tar.gz"
+        sha256 "56c614dbbc5268c378626d5f5163b8f0998871cf0b63bb82b78e5ee3001d2a84"
 
         def install
           bin.install "cerbos"
@@ -43,8 +43,8 @@ class Cerbos < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cerbos/cerbos/releases/download/v0.42.0/cerbos_0.42.0_Linux_arm64.tar.gz"
-        sha256 "fbc1d4c867af52624c3b2f07908e3e2148b2410a5cc7d88452bc98480cc6ef11"
+        url "https://github.com/cerbos/cerbos/releases/download/v0.43.0/cerbos_0.43.0_Linux_arm64.tar.gz"
+        sha256 "dd55eebc09f94d94fcdd0fb1b06a965ee76d16c072cc882f64eaeea72acf82d0"
 
         def install
           bin.install "cerbos"
