@@ -3,7 +3,7 @@ cask "cerbos" do
   name "cerbos"
   desc "Cerbos is the open core, language-agnostic, scalable authorization solution that makes user permissions and authorization simple to implement and manage by writing context-aware access control policies for your application resources."
   homepage "https://cerbos.dev"
-  version "0.50.0"
+  version "0.51.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "cerbos" do
     on_intel do
       url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_x86_64.tar.gz",
         verified: "github.com/cerbos/homebrew-tap"
-      sha256 "9d161ade1d554271f41ff016f91162b4a18ab7746988e8d04e6f06d98b3a9d5a"
+      sha256 "db023e96975f8174417ad8afeabe20efff7cc70d4e31a254cfbbd207e2d9377b"
     end
     on_arm do
       url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_arm64.tar.gz",
         verified: "github.com/cerbos/homebrew-tap"
-      sha256 "f9ca4ac1d3e86c1640da4230412890d4ce762dfdf921707fcf9a17d6c3c765f2"
+      sha256 "0751e62672bddde147e81cf721320d51eb0920c3b2fd820c2af007c578f9d56e"
     end
   end
 
@@ -28,12 +28,12 @@ cask "cerbos" do
     on_intel do
       url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_x86_64.tar.gz",
         verified: "github.com/cerbos/homebrew-tap"
-      sha256 "c9bc8f7670693423b59303c6d93ebf694f746712c18a01708fab6dc7f69381ea"
+      sha256 "b95b7512c7825986b0711aa24320f7ae2e7c004e7d0db01ae7a36075e97ec81d"
     end
     on_arm do
       url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_arm64.tar.gz",
         verified: "github.com/cerbos/homebrew-tap"
-      sha256 "85fbaad8f86834ccdffd537ccdddcab69a51a277d3d1b0c5d97feecb2835f6b3"
+      sha256 "16059ca769894670ae54b3cf5fb32519df00758d9b8249127734ceb1708d53ff"
     end
   end
 
