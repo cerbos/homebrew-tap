@@ -36,7 +36,7 @@ cask "cerbos" do
 
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cerbos"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/cerbos"]
     end
   end
 
