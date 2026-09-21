@@ -5,26 +5,22 @@ cask "cerbos" do
   on_macos do
     on_intel do
       sha256 "de9f497015e118bd52b57608740eb63c1c4dc08a9de2ebd9741d2511d9338137"
-      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_x86_64.tar.gz",
-        verified: "github.com/cerbos/homebrew-tap"
+      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_x86_64.tar.gz"
     end
     on_arm do
       sha256 "ea480da639ca7c93ad178fcc1924092133f0874311ff36b67d457064957d1b74"
-      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_arm64.tar.gz",
-        verified: "github.com/cerbos/homebrew-tap"
+      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
       sha256 "01cb5ae0b888393219846c1bc43d4ed1a4701a51fb8ae38523d3a378e685efca"
-      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_x86_64.tar.gz",
-        verified: "github.com/cerbos/homebrew-tap"
+      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_x86_64.tar.gz"
     end
     on_arm do
       sha256 "838c9d1339a69e078fccb1f30e5bfd85662c3b3b6d42a142c336bb34d1e5e3a3"
-      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_arm64.tar.gz",
-        verified: "github.com/cerbos/homebrew-tap"
+      url "https://github.com/cerbos/cerbos/releases/download/v#{version}/cerbos_#{version}_Linux_arm64.tar.gz"
     end
   end
 
@@ -38,9 +34,9 @@ cask "cerbos" do
 
   binary "cerbos"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cerbos"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cerbos"]
     end
   end
 
