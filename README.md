@@ -4,8 +4,10 @@ Cerbos Homebrew Tap
 A [Homebrew tap](https://docs.brew.sh/Taps) for distributing Cerbos binaries.
 
 ```sh
+brew trust cerbos/tap
 brew tap cerbos/tap
 brew install cerbos
+brew install cerbosctl
 ```
 
 Cerbos is the open core, language-agnostic, scalable authorization solution that makes user permissions and authorization simple to implement and manage by writing context-aware access control policies for your application resources.
