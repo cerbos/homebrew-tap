@@ -33,9 +33,9 @@ cask "cerbosctl" do
 
   binary "cerbosctl"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cerbosctl"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/cerbosctl"]
     end
   end
 
